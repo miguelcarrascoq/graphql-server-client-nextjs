@@ -1,5 +1,7 @@
 # NextJS 14 - GraphQL Server & Client
 
+GraphQL Server & Client with Next.js, and deploy to Netlify.
+
 ## Install and run locally
 
 ```bash
@@ -27,6 +29,9 @@ curl --request POST \
 ## set .env file
 
 ```env
-NEXT_PUBLIC_URL_SERVER_GRAPHQL=https://graphql-server-client-nextjs.netlify.app/api/graphql
 NEXT_PUBLIC_URL_SERVER_GRAPHQL=http://localhost:3000/api/graphql
 ```
+
+## deploy to netlify
+
+Working project in: https://graphql-server-client-nextjs.netlify.app
