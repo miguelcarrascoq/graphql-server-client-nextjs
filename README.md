@@ -1,4 +1,13 @@
-Operation Example
+# NextJS 14 - GraphQL Server & Client
+
+## Install and run locally
+
+```bash
+npm install
+npm run dev
+```
+
+## Operation Example
 
 ```graphql
 query ExampleQuery {
@@ -6,7 +15,7 @@ query ExampleQuery {
 }
 ```
 
-CURL version
+## CURL version
 
 ```bash
 curl --request POST \
@@ -15,7 +24,7 @@ curl --request POST \
   --data '{"query":"query ExampleQuery { hello }"}'
 ```
 
-.env
+## set .env file
 
 ```env
 NEXT_PUBLIC_URL_SERVER_GRAPHQL=https://graphql-server-client-nextjs.netlify.app/api/graphql
