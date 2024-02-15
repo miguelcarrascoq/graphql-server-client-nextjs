@@ -2,12 +2,12 @@ import { NextRequest } from 'next/server';
 import { ApolloServer } from '@apollo/server';
 import { startServerAndCreateNextHandler } from '@as-integrations/next';
 import { gql } from 'graphql-tag';
-import { ApolloServerPluginLandingPageLocalDefault, ApolloServerPluginLandingPageProductionDefault } from '@apollo/server/plugin/landingPage/default';
+import { ApolloServerPluginLandingPageProductionDefault } from '@apollo/server/plugin/landingPage/default';
 
 const resolvers = {
-    Query: {
-        hello: () => 'world',
-    },
+  Query: {
+    hello: () => 'world',
+  },
 };
 
 const typeDefs = gql`
@@ -17,12 +17,15 @@ const typeDefs = gql`
 `;
 
 const server = new ApolloServer({
-    resolvers,
-    typeDefs
+  resolvers,
+  typeDefs,
+  plugins: [
+    ApolloServerPluginLandingPageProductionDefault({ footer: false }),
+  ],
 });
 
 const handler = startServerAndCreateNextHandler<NextRequest>(server, {
-    context: async req => ({ req }),
+  context: async req => ({ req }),
 });
 
 export { handler as GET, handler as POST };
