@@ -16,6 +16,18 @@ export default function Client() {
         })
             .then(response => response.json())
             .then(data => console.log(data));
+
+        fetch(`${process.env.NEXT_PUBLIC_URL_SERVER_GRAPHQL}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                query: 'query ExampleQuery { numero }',
+            }),
+        })
+            .then(response => response.json())
+            .then(data => console.log(data));
     }
 
     useEffect(() => {
