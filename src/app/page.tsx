@@ -14,7 +14,6 @@ export default function Home() {
         query ExampleQuery {
           hello
         }
-      }
     `,
     })
     .then((result) => console.log(result));
@@ -24,7 +23,11 @@ export default function Home() {
       <Link href="/api/graphql">
         GraphQL here...
       </Link>
-      <p>...and see the console</p>
+      <br />
+      <Link href="/client">
+        Client
+      </Link>
+      <p>...and see the server console</p>
     </>
   );
 }

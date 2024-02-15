@@ -7,12 +7,16 @@ import { ApolloServerPluginLandingPageLocalDefault } from '@apollo/server/plugin
 const resolvers = {
   Query: {
     hello: () => 'world',
+    numero: () => 123
   },
 };
 
 const typeDefs = gql`
   type Query {
     hello: String
+  }
+  type Query {
+    numero: Int
   }
 `;
 
