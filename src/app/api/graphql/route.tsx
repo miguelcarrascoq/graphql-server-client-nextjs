@@ -2,7 +2,7 @@ import { NextRequest } from 'next/server';
 import { ApolloServer } from '@apollo/server';
 import { startServerAndCreateNextHandler } from '@as-integrations/next';
 import { gql } from 'graphql-tag';
-import { ApolloServerPluginLandingPageProductionDefault } from '@apollo/server/plugin/landingPage/default';
+import { ApolloServerPluginLandingPageLocalDefault } from '@apollo/server/plugin/landingPage/default';
 
 const resolvers = {
   Query: {
@@ -20,7 +20,7 @@ const server = new ApolloServer({
   resolvers,
   typeDefs,
   plugins: [
-    ApolloServerPluginLandingPageProductionDefault({ footer: false }),
+    ApolloServerPluginLandingPageLocalDefault({ footer: false })
   ],
 });
 
