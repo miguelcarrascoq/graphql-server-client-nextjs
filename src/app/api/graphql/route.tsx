@@ -24,7 +24,15 @@ const server = new ApolloServer({
   resolvers,
   typeDefs,
   plugins: [
-    ApolloServerPluginLandingPageLocalDefault({ footer: false, embed: true })
+    ApolloServerPluginLandingPageLocalDefault({
+      embed: {
+        runTelemetry: false,
+        endpointIsEditable: false,
+        initialState: {
+          pollForSchemaUpdates: false
+        }
+      }
+    })
   ],
 });
 
