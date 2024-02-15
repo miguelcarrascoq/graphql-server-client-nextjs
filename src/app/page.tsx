@@ -1,8 +1,9 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div>hola...</div>
+    <Link href="/api/graphql">
+      GraphQL here...
+    </Link>
   );
 }
