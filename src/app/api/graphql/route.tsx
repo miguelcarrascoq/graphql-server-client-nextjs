@@ -24,7 +24,7 @@ const server = new ApolloServer({
   resolvers,
   typeDefs,
   plugins: [
-    ApolloServerPluginLandingPageLocalDefault({ footer: false })
+    ApolloServerPluginLandingPageLocalDefault({ footer: false, embed: true })
   ],
 });
 
