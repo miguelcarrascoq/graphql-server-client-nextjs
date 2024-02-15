@@ -4,7 +4,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client
 export default function Home() {
 
   const client = new ApolloClient({
-    uri: 'https://graphql-server-client-nextjs.netlify.app/api/graphql',
+    uri: process.env.NEXT_PUBLIC_URL_SERVER_GRAPHQL,
     cache: new InMemoryCache(),
   });
 

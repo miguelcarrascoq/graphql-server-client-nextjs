@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 export default function Client() {
 
     const callApi = () => {
-        fetch('https://graphql-server-client-nextjs.netlify.app/api/graphql', {
+        fetch(`${process.env.NEXT_PUBLIC_URL_SERVER_GRAPHQL}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
