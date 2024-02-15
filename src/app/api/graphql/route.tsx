@@ -18,10 +18,7 @@ const typeDefs = gql`
 
 const server = new ApolloServer({
     resolvers,
-    typeDefs,
-    plugins: [
-        ApolloServerPluginLandingPageLocalDefault({ footer: false }),
-    ],
+    typeDefs
 });
 
 const handler = startServerAndCreateNextHandler<NextRequest>(server, {
